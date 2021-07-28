@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.masai.a10028july_retrofit_upload_file_image_videos">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:networkSecurityConfig="@xml/network_security_config"
+        android:usesCleartextTraffic="true"
+        android:theme="@style/Theme.10028July_Retrofit_Upload_File_Image_Videos">
+        <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>
+<!--
+Failed to open QEMU pipe 'qemud:network': Invalid argument => this is error and 1. 2. are solution on error
+
+1. here I have add networkSecurityConfig and uses cleartextTraffic;
+2. you can delete xml resource layout also network_security_config too
+
+This error could be seen on Android Emulator/Device Version >= 6.0.
+It occurs when your app tries to send/receive request/response to a remote API that is not secure (http).
+That's the reason why you should stick to communicating with remote API's via a secured channel (https).
+But you can resolve the issue by setting the usesCleartextTraffic attribute to "true"
+inside the application opening tag of your android manifest file.-->

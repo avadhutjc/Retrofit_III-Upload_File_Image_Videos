@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.masai.a10028july_retrofit_upload_file_image_videos"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="21"
+        android:targetSdkVersion="30" />
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
+    <application
+        android:allowBackup="true"
+        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+        android:debuggable="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:networkSecurityConfig="@xml/network_security_config"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:testOnly="true"
+        android:theme="@style/Theme.10028July_Retrofit_Upload_File_Image_Videos"
+        android:usesCleartextTraffic="true" >
+        <activity android:name="com.masai.a10028july_retrofit_upload_file_image_videos.MainActivity" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest><!--
+Failed to open QEMU pipe 'qemud:network': Invalid argument => this is error and 1. 2. are solution on error
+
+1. here I have add networkSecurityConfig and uses cleartextTraffic;
+2. you can delete xml resource layout also network_security_config too
+
+This error could be seen on Android Emulator/Device Version >= 6.0.
+It occurs when your app tries to send/receive request/response to a remote API that is not secure (http).
+That's the reason why you should stick to communicating with remote API's via a secured channel (https).
+But you can resolve the issue by setting the usesCleartextTraffic attribute to "true"
+inside the application opening tag of your android manifest file.
+-->

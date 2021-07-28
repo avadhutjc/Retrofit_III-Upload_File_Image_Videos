@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "artifactType": {
+    "type": "COMPATIBLE_SCREEN_MANIFEST",
+    "kind": "Directory"
+  },
+  "applicationId": "com.masai.a10028july_retrofit_upload_file_image_videos",
+  "variantName": "debug",
+  "elements": []
+}
